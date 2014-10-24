@@ -1,0 +1,21 @@
+  <div id="advanced-recent-posts-2" class="widget advanced_recent_posts_widget clearfix"><h4 class="widget-title">Recent Recipes</h4><ul>
+      <% @recent[0..5].each do | r| %>
+        <li class="recent-post-item">
+
+          <a  href="http://themes.divwrap.com/ingredients/recipe/cheesy-pizza/" rel="bookmark" title="Permanent link to Cheesy Pizza" class="post-title"><%= r.title %></a>
+
+                                    <div class="post-entry">
+          
+            <a href="/recipes/<%= r.id %>" title="<%= r.title %>">
+
+            <img src="<%= r.image %>" height="58" width="58" alt="<%= r.title %>" width="58" height="58" />
+
+            </a>
+
+                  </div>
+          
+        </li>
+      <% end %>
+
+      </ul>
+  </div>

@@ -1,0 +1,24 @@
+
+<div id="post-26" class="post-26 recipe type-recipe status-publish format-standard hentry category-desserts other-block slim">
+          <div class="top"></div>
+<div class="mid">
+
+	<div class="recipe-info">
+	
+		<h4 class="recipe-title"><%= link_to rec.title[0..25] , rec %><a>...</a></h4>
+	
+	</div>
+	
+	<div class="recipe-thumb">
+	
+									
+		<a href="/recipes/<%=rec.id %>" class="pretty fade enlarge" title="<%= rec.title[0..25] %>">
+			<img src="<%= rec.image %>" height="150" width="200" alt="">
+		</a>
+		
+								
+	</div>
+
+</div>
+<div class="bot"></div>
+          </div>

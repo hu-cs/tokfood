@@ -1,0 +1,12 @@
+<div class="row">
+        <h2 class="centered"><%= recipe.title%></h2>
+        <hr>
+        <br>
+        
+         <br>
+        <div class="col-lg-offset-2 col-lg-8">
+          <% recipe.ingredients.split(",").each do | ing| %>
+         <p><%= ing %></p>
+      <% end %>
+        </div><!-- col-lg -->
+      </div><!-- row -->

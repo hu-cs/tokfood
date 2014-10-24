@@ -1,0 +1,67 @@
+
+<%= form_for recipe, :html => {:multipart => true} do |f| %>
+  <% if recipe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
+
+      <ul>
+      <% @recipe.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <p>
+    <form class="form-horizontal" role="form">
+      <div class="form-group">
+        <label for="inputTitle" class="col-lg-4 control-label"></label>
+        <div class="col-lg-10">
+             <%= f.text_field :title, :class=>"form-control", :id=>"title", :placeholder=>"Recipe title" %>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="Creatpr" class="col-lg-4 control-label"></label>
+        <div class="col-lg-10">
+           <%= f.text_field :creator,  :class=>"form-control", :id=>"creator", :placeholder=>"Creator" %>
+          
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="text1" class="col-lg-4 control-label"></label>
+        <div class="col-lg-10">
+           <%= f.file_field :image, :class=>"form-control", :id=>"image", :placeholder=>"Reciep image" %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="ingredients" class="col-lg-4 control-label"></label>
+        <div class="col-lg-10">
+           <%= f.text_area :ingredients, :id => "ingredients_area", :cols => 35, :rows => 10, :class=>"form-control", :id=>"ingredients", :placeholder=>"Recipe ingredients" %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="serving" class="col-lg-4 control-label"></label>
+        <div class="col-lg-10">
+           <%= f.text_area :serving, :id => "serving_area", :cols => 35, :rows => 10, :class=>"form-control", :id=>"serving", :placeholder=>"Recipe Serving (optional)" %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-lg-10">
+           <%= f.submit "Create Recipe", :class=>"btn btn-success" %>
+           </br></br>
+        </div>
+
+      </div>
+
+     </form><!-- form -->
+  </p>
+
+</div><!-- col -->
+</br></br>
+
+<% end %>

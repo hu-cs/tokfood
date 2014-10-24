@@ -1,0 +1,26 @@
+<!-- ==== SERVICES ==== -->
+    <div class="container" id="services" name="services">
+      <br>
+      <br>
+      
+      <%= render "shared/brand", :recipe => @recipe %>
+
+      <div class="row">
+        
+        <hr>
+        <br>
+        <div class="col-lg-offset-3 col-lg-8">
+           <% unless (@recipe.image.include? "http") then %>
+              <img class="img-responsive" src="/data/<%= @recipe.image %>" style=" width: 600px;height: 220px;" />
+            <% else %>      
+              <img class="img-responsive img-rounded" src="<%= @recipe.image %>" height="356" width="600" alt="" style=" width: 600px;height: 320px;" />
+
+            <% end %>
+        </div><!-- col -->
+      </div><!-- row -->
+    </div><!-- container -->
+
+    <!-- ==== SECTION DIVIDER2 -->
+    <br/>
+    <br/>
+    <br/>
