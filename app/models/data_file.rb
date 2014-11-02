@@ -1,3 +1,12 @@
+# == Schema Information
+#
+# Table name: data_files
+#
+#  id         :integer          not null, primary key
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 class DataFile < ActiveRecord::Base
 
 	def self.save(upload)
