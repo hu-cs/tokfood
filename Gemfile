@@ -45,4 +45,4 @@ gem 'annotate', '~> 2.6.5'
 gem 'retina_rails', '~> 2.0.0'
 gem 'will_paginate-bootstrap'
 #gem 'mandrill-rails'
-gem 'mandrill-api', '~> 1.0.51'
+gem 'mandrill-api', '~> 1.0.51', require: "mandrill"
