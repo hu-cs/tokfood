@@ -1,6 +1,63 @@
-<h1>Editing recipe</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SHIELD - Free Bootstrap 3 Theme">
+    <meta name="author" content="Carlos Alvarez - Alvarez.is - blacktie.co">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
 
-<%= render 'form' %>
+    <title> </title>
 
-<%= link_to 'Show', @recipe %> |
-<%= link_to 'Back', recipes_path %>
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="assets/css/bootstrap.css" rel="stylesheet"> -->
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="assets/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/icomoon.css">
+    <link href="assets/css/animate-custom.css" rel="stylesheet"> -->
+
+
+    
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+    
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="assets/html5shiv.js"></script>
+      <script src="assets/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body data-spy="scroll" data-offset="0" data-target="#navbar-main">
+  
+  	 <br/>
+
+  	 <div class="container" id="contact" name="contact">
+      <div class="row">
+      <br>
+        <h1 class="centered"></h1>
+        <hr>
+        <br>
+        <br>
+        <div class="col-lg-8">
+       
+			<%= render "form", :recipe => @recipe %>
+
+
+    	</div>
+         
+         <br/><br/><br/><br/>
+         <hr/>  
+         <%= link_to 'Show', @recipe %> |
+		 <%= link_to 'Back', recipes_path %>
+
+      </div><!-- row -->
+    
+    </div><!-- container -->
+
+
+  </body>
+</html>
+

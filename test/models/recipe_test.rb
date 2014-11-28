@@ -13,6 +13,9 @@
 #  updated_at  :datetime
 #  tags        :string(255)
 #  image       :string(255)
+#  video_link  :string(255)
+#  large_image :string(255)
+#  published   :boolean
 #
 
 require 'test_helper'

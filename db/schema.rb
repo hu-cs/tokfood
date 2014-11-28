@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141024141724) do
+ActiveRecord::Schema.define(version: 20141127134645) do
 
   create_table "data_files", force: true do |t|
     t.datetime "created_at"
@@ -29,6 +29,9 @@ ActiveRecord::Schema.define(version: 20141024141724) do
     t.datetime "updated_at"
     t.string   "tags"
     t.string   "image"
+    t.string   "video_link"
+    t.string   "large_image"
+    t.boolean  "published"
   end
 
   create_table "users", force: true do |t|

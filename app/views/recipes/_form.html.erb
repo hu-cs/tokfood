@@ -1,6 +1,5 @@
-
-<%= form_for recipe, :html => {:multipart => true} do |f| %>
-  <% if recipe.errors.any? %>
+<%= form_for @recipe, :html => {:class => "form-horizontal"} do |f| %>
+  <% if @recipe.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
 
@@ -14,27 +13,22 @@
 
 
   <p>
-    <form class="form-horizontal" role="form">
+
+
       <div class="form-group">
         <label for="inputTitle" class="col-lg-4 control-label"></label>
         <div class="col-lg-10">
              <%= f.text_field :title, :class=>"form-control", :id=>"title", :placeholder=>"Recipe title" %>
         </div>
       </div>
+      <% recipe = @recipe %>
       <div class="form-group">
-        <label for="Creatpr" class="col-lg-4 control-label"></label>
+        <label for="thumbnail" class="col-lg-4 control-label"></label>
         <div class="col-lg-10">
-           <%= f.text_field :creator,  :class=>"form-control", :id=>"creator", :placeholder=>"Creator" %>
-          
+             <img src="<%= recipe.image %>">
         </div>
       </div>
-
-      <div class="form-group">
-        <label for="text1" class="col-lg-4 control-label"></label>
-        <div class="col-lg-10">
-           <%= f.file_field :image, :class=>"form-control", :id=>"image", :placeholder=>"Reciep image" %>
-        </div>
-      </div>
+      
 
       <div class="form-group">
         <label for="ingredients" class="col-lg-4 control-label"></label>
@@ -43,10 +37,43 @@
         </div>
       </div>
 
+
+
       <div class="form-group">
         <label for="serving" class="col-lg-4 control-label"></label>
         <div class="col-lg-10">
            <%= f.text_area :serving, :id => "serving_area", :cols => 35, :rows => 10, :class=>"form-control", :id=>"serving", :placeholder=>"Recipe Serving (optional)" %>
+        </div>
+      </div>
+      Video link:
+      <div class="form-group">
+        <label for="inputTitle" class="col-lg-4 control-label"></label>
+        <div class="col-lg-10">
+             <%= f.text_field :video_link, :class=>"form-control", :id=>"title", :placeholder=>"video link" ,:readonly => true %>
+        </div>
+      </div>
+      Medium image:
+      <div class="form-group">
+        <label for="inputTitle" class="col-lg-4 control-label"></label>
+        <div class="col-lg-10">
+             <%= f.text_field :image, :class=>"form-control", :id=>"image", :placeholder=>"image" %>
+        </div>
+      </div>
+      Large image:
+      <div class="form-group">
+        <label for="inputTitle" class="col-lg-4 control-label"></label>
+        <div class="col-lg-10">
+             <%= f.text_field :large_image, :class=>"form-control", :id=>"large_image", :placeholder=>"large_image"  %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="inputTitle" class="col-lg-4 control-label"></label>
+        <div class="col-lg-10">
+          <%= f.label :published do %>
+            <%= f.check_box :published %>
+            Publish
+          <% end %>
         </div>
       </div>
 

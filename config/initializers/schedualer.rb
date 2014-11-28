@@ -4,7 +4,7 @@ require 'open-uri'
 
 scheduler = Rufus::Scheduler.new
 
-scheduler.every '1m' do
+scheduler.every '6d' do
   puts "do something in every days.."
   send_weekly_emails_to_users
 end

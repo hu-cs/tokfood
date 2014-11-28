@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails' #, '4.1.1'
+gem 'rails' #, '4.1.7'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
@@ -46,3 +46,6 @@ gem 'retina_rails', '~> 2.0.0'
 gem 'will_paginate-bootstrap'
 #gem 'mandrill-rails'
 gem 'mandrill-api', '~> 1.0.51', require: "mandrill"
+gem 'auto_html' # https://github.com/dejan/auto_html
+gem 'video_info' # https://github.com/thibaudgg/video_info
+gem 'modernizr-rails'
