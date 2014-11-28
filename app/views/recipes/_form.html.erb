@@ -33,16 +33,28 @@
       <div class="form-group">
         <label for="ingredients" class="col-lg-4 control-label"></label>
         <div class="col-lg-10">
-           <%= f.text_area :ingredients, :id => "ingredients_area", :cols => 35, :rows => 10, :class=>"form-control", :id=>"ingredients", :placeholder=>"Recipe ingredients" %>
+          <%= f.text_area :ingredients, :id => "ingredients_area", :cols => 75, :rows => 15, :class=>"wysihtml5 form-control", :id=>"ingredients", :placeholder=>"Recipe ingredients" %>
+           
         </div>
       </div>
 
+      
 
+<script type="text/javascript">
+  $(document).ready(function(){
+
+    $('.wysihtml5').each(function(i, elem) {
+      $(elem).wysihtml5();
+    });
+
+  })
+</script>
 
       <div class="form-group">
         <label for="serving" class="col-lg-4 control-label"></label>
         <div class="col-lg-10">
-           <%= f.text_area :serving, :id => "serving_area", :cols => 35, :rows => 10, :class=>"form-control", :id=>"serving", :placeholder=>"Recipe Serving (optional)" %>
+      
+           <%= f.text_area :serving, :id => "serving_area", :cols => 35, :rows => 10, :class=>"wysihtml5 form-control", :id=>"serving", :placeholder=>"Recipe Serving (optional)" %>
         </div>
       </div>
       Video link:
