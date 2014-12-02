@@ -50,3 +50,4 @@ gem 'auto_html' # https://github.com/dejan/auto_html
 gem 'video_info' # https://github.com/thibaudgg/video_info
 gem 'modernizr-rails'
 gem 'bootstrap-wysihtml5-rails', :git => 'git://github.com/Nerian/bootstrap-wysihtml5-rails.git'
+gem 'devise'

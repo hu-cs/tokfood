@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :recipes 
   resources :users
   match "/recipes/video/search" => "recipes#search", via: [:get, :post]
