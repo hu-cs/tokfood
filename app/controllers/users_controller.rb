@@ -61,6 +61,18 @@ class UsersController < ApplicationController
     end
   end
 
+  def subscribe
+    puts "*** subscribe"
+    @user = User.new(user_params)
+    @user.password = rand(36**12).to_s(36) # random string
+    respond_to do |format|
+      if @user.save
+        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.json { render :show, status: :created, location: @user }
+      end
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
@@ -70,7 +82,7 @@ class UsersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       # params[:user]
-      params.require(:user).permit(:email)
+      params.require(:user).permit(:email, :name)
     end
 
 end

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :recipes 
   resources :users
+  match "/users/subscribe" => "users#subscribe", via: [:post]
   match "/recipes/video/search" => "recipes#search", via: [:get, :post]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

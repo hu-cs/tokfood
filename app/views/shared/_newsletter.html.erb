@@ -1,8 +1,9 @@
 <div class="col-lg-4">
-          <h3>Newsletter</h3>
-          <p>Register to our newsletter and be updated with the latests information regarding our services, offers and much more.</p>
+          <h3>Weekly Newsletter</h3>
+          <p>Register to our weekly newsletter and be updated with the latests yummy recipies.</p>
           <p>
-            <%= form_for @user, :html => {:class => "form-horizontal"} do |f| %>
+
+            <%= form_for @user, :url => users_subscribe_path(@user), :method => :post,  :html => {:class => "form-horizontal"} do |f| %>
             <!-- <form class="form-horizontal" role="form"> -->
               <div class="form-group">
                 <label for="inputEmail1" class="col-lg-4 control-label"></label>
