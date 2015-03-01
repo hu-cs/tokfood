@@ -1,9 +1,9 @@
 class AdminMailer < ActionMailer::Base
   default from: "noreply@example.com"
-  default to: "shafi.tokhi@gmail.com"
+  default to: "smrt.recipes@gmail.com"
 
   def mandrill_client
-  	@mandrill_client ||= Mandrill::API.new MANDRILL_API_KEY
+  	# @mandrill_client ||= Mandrill::API.new MANDRILL_API_KEY
   	
   end
   def new_user(user)
@@ -13,6 +13,11 @@ class AdminMailer < ActionMailer::Base
 
   def send_notification
   	AdminMailer.new_user(self).deliver  	
+  end
+
+  def weekly_recipes(recipes, users)
+    mail(to: user.email, subject: 'This week recipes', 
+      template_name: 'weekly_recipes')
   end
 
   def weekly_recipes(recipes, users)

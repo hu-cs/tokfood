@@ -33,8 +33,8 @@ gem 'spring',        group: :development
 # gem 'unicorn'
 
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
+ gem 'capistrano-rails', group: :development
+gem 'capistrano-rvm'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
@@ -51,3 +51,4 @@ gem 'video_info' # https://github.com/thibaudgg/video_info
 gem 'modernizr-rails'
 gem 'bootstrap-wysihtml5-rails', :git => 'git://github.com/Nerian/bootstrap-wysihtml5-rails.git'
 gem 'devise'
+gem 'passenger'
