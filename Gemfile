@@ -4,7 +4,8 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails' #, '4.1.7'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#gem 'sqlite3'
+gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -33,7 +34,7 @@ gem 'spring',        group: :development
 # gem 'unicorn'
 
 # Use Capistrano for deployment
- gem 'capistrano-rails', group: :development
+gem 'capistrano-rails', group: :development
 gem 'capistrano-rvm'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
@@ -52,3 +53,5 @@ gem 'modernizr-rails'
 gem 'bootstrap-wysihtml5-rails', :git => 'git://github.com/Nerian/bootstrap-wysihtml5-rails.git'
 gem 'devise'
 gem 'passenger'
+gem 'execjs'
+gem 'therubyracer'
