@@ -54,4 +54,3 @@ gem 'bootstrap-wysihtml5-rails', :git => 'git://github.com/Nerian/bootstrap-wysi
 gem 'devise'
 gem 'passenger'
 gem 'execjs'
-gem 'therubyracer'
