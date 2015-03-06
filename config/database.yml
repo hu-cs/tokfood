@@ -5,13 +5,14 @@
 #   gem 'sqlite3'
 #
 default: &default
+  adapter: postgresql
   encoding: unicode
+  host: localhost
   pool: 5
   timeout: 5000
 
 development:
   <<: *default
-  adapter: sqlite3
   database: db/development.sqlite3
 
 # Warning: The database defined as "test" will be erased and
@@ -23,7 +24,6 @@ test:
 
 production:
   <<: *default
-  adapter: postgresql
   database: tokfood_production
   encoding: unicode
   username: tokfood
