@@ -1,4 +1,4 @@
-MAIL_KEY =  "lovecandle20153"
+MAIL_KEY =  "lovecandle"
 ActionMailer::Base.smtp_settings = {
 	address: "smtp.gmail.com",
 	port: 587,
