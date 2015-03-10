@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :users
   match "/users/subscribe" => "users#subscribe", via: [:post]
   match "/recipes/video/search" => "recipes#search", via: [:get, :post]
+  root 'recipes#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
