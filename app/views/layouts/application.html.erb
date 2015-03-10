@@ -1,29 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Tokfood</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag :modernizr %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<%= render "shared/navbar" %>
-<div class="row">
-<div class="col-lg-3 col-sm-4 col-6">
-    <br>
-</div>    
-</div>
+	<title>Tokfood</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag :modernizr %>
+	<%= csrf_meta_tags %>
 
-<%= yield %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Smart recipe videos">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
 
-<div class="row">
-<div class="col-lg-3 col-sm-4 col-6">
-    <br>
-</div>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
     
-</div>
-<%= render "shared/footer" %>
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="assets/html5shiv.js"></script>
+      <script src="assets/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
+	<%= render "shared/navbar" %>
+	<div class="row">
+		<div class="col-lg-3 col-sm-4 col-6">
+			<br>
+		</div>    
+	</div>
+
+	<%= yield %>
+
+	<div class="row">
+		<div class="col-lg-3 col-sm-4 col-6">
+			<br>
+		</div>
+
+	</div>
+	<%= render "shared/footer" %>
 
 </body>
 </html>

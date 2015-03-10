@@ -1,110 +1,103 @@
+<!-- PORTFOLIO IMAGE 1 -->
+<div class="col-md-4">
+  <div class="tok-clip  hover-bound">
+    <div class="picfx">
+      <a href="/recipes/<%= recipe[index].id %>">
+        <img class="lzy-ld" data-original="<%= recipe[index].image %>" src="<%= recipe[index].image %>" alt="#" style="display: inline;">
+      </a>
+    </div>
 
-       
-      <div class="row"> 
-      
-        <!-- PORTFOLIO IMAGE 1 -->
-        <div class="col-md-4">
-            <div class="tok-clip  hover-bound">
-              <div class="picfx">
-                  <a href="/recipes/<%= recipe[index].id %>">
-                      <img class="lzy-ld" data-original="<%= recipe[index].image %>" src="<%= recipe[index].image %>" alt="#" style="display: inline;">
-                  </a>
-              </div>
+    <a href="/recipes/<%= recipe[index].id %>" class="article-title">
+      <h2 class="text-center"><%= recipe[index].title %></h2>
+    </a>
 
-              <a href="/recipes/<%= recipe[index].id %>" class="article-title">
-                  <h2 class="text-center"><%= recipe[index].title %></h2>
-              </a>
+    <div class="tok-social hidden-phone" style="display: none;">
+      <a class="reddit-share" href="#"><i class="icon-reddit"></i> 0</a>
+      <a class="fb-share" href="#"><i class="icon-facebook"></i>1</a>
+      <a class="tw-share" href="#"><i class="icon-twitter"></i>9</a>
+    </div>
 
-              <div class="tok-social hidden-phone" style="display: none;">
-                  <a class="reddit-share" href="#"><i class="icon-reddit"></i> 0</a>
-                  <a class="fb-share" href="#"><i class="icon-facebook"></i>1</a>
-                  <a class="tw-share" href="#"><i class="icon-twitter"></i>9</a>
-              </div>
+    <div class="tok-micro" style="display: block;"><span class="glyphicon glyphicon-heart" style="vertical-align:4px;"></span></div>
 
-              <div class="tok-micro" style="display: block;"><span class="glyphicon glyphicon-heart" style="vertical-align:4px;"></span></div>
+  </div>
 
-              
+</div><!-- /col -->
 
-          </div>
+   <!-- MODAL SHOW THE PORTFOLIO IMAGE. In this demo, all links point to this modal. You should create
+   a modal for each of your projects. -->
 
-        </div><!-- /col -->
-        
-             <!-- MODAL SHOW THE PORTFOLIO IMAGE. In this demo, all links point to this modal. You should create
-                  a modal for each of your projects. -->
-                  
-              <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                      <h4 class="modal-title">Project Title</h4>
-                    </div>
-                    <div class="modal-body">
-                      <p><img class="img-responsive" src="assets/portfolio/folio01.jpg" alt=""></p>
-                      <p></p>
-                      <p><b><a href="#">Visit Site</a></b></p>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                  </div><!-- /.modal-content -->
-                </div><!-- /.modal-dialog -->
-              </div><!-- /.modal -->
-        
-        
-        <!-- PORTFOLIO IMAGE 2 -->
-        <div class="col-md-4">
-            <div class="tok-clip  hover-bound">
-              <div class="picfx">
-                  <a href="/recipes/<%= recipe[index+1].id %>">
-                      <img class="lzy-ld" data-original="<%= recipe[index+1].image %>" src="<%= recipe[index+1].image %>" alt="#" style="display: inline;">
-                  </a>
-              </div>
-
-              <a href="/recipes/<%= recipe[index+1].id %>" class="article-title">
-                   <h2 class="text-center"><%= recipe[index+1].title %></h2>
-              </a>
-
-              <div class="tok-social hidden-phone" style="display: none;">
-                  <a class="reddit-share" href="#"><i class="icon-reddit"></i> 0</a>
-                  <a class="fb-share" href="#"><i class="icon-facebook"></i>1</a>
-                  <a class="tw-share" href="#"><i class="icon-twitter"></i>9</a>
-              </div>
-
-              <div class="tok-micro" style="display: block;"><span class="glyphicon glyphicon-heart" style="vertical-align:4px;"></span></div>
-              
-
-          </div>
-
-        </div><!-- /col -->
+   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h4 class="modal-title">Project Title</h4>
+        </div>
+        <div class="modal-body">
+          <p><img class="img-responsive" src="assets/portfolio/folio01.jpg" alt=""></p>
+          <p></p>
+          <p><b><a href="#">Visit Site</a></b></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
 
 
-        
-        <!-- PORTFOLIO IMAGE 3 -->
-        <div class="col-md-4">
-            <div class="tok-clip  hover-bound">
-              <div class="picfx">
-                  <a href="/recipes/<%= recipe[index+2].id %>">
-                      <img class="lzy-ld" data-original="<%= recipe[index+2].image %>" src="<%= recipe[index+2].image %>" alt="#" style="display: inline;">
-                  </a>
-              </div>
+  <!-- PORTFOLIO IMAGE 2 -->
+  <div class="col-md-4">
+    <div class="tok-clip  hover-bound">
+      <div class="picfx">
+        <a href="/recipes/<%= recipe[index+1].id %>">
+          <img class="lzy-ld" data-original="<%= recipe[index+1].image %>" src="<%= recipe[index+1].image %>" alt="#" style="display: inline;">
+        </a>
+      </div>
 
-              <a href="/recipes/<%= recipe[index+2].id %>" class="article-title">
-                   <h2 class="text-center"><%= recipe[index+2].title %></h2>
-              </a>
+      <a href="/recipes/<%= recipe[index+1].id %>" class="article-title">
+       <h2 class="text-center"><%= recipe[index+1].title %></h2>
+     </a>
 
-              <div class="tok-social hidden-phone" style="display: none;">
-                  <a class="reddit-share" href="#"><i class="icon-reddit"></i> 0</a>
-                  <a class="fb-share" href="#"><i class="icon-facebook"></i>1</a>
-                  <a class="tw-share" href="#"><i class="icon-twitter"></i>9</a>
-              </div>
+     <div class="tok-social hidden-phone" style="display: none;">
+      <a class="reddit-share" href="#"><i class="icon-reddit"></i> 0</a>
+      <a class="fb-share" href="#"><i class="icon-facebook"></i>1</a>
+      <a class="tw-share" href="#"><i class="icon-twitter"></i>9</a>
+    </div>
 
-              <div class="tok-micro" style="display: block;"><span class="glyphicon glyphicon-heart" style="vertical-align:4px;"></span></div>
+    <div class="tok-micro" style="display: block;"><span class="glyphicon glyphicon-heart" style="vertical-align:4px;"></span></div>
+    
 
-             
-          </div>
+  </div>
 
-        </div><!-- /col -->
+</div><!-- /col -->
 
-     
-      
+
+
+<!-- PORTFOLIO IMAGE 3 -->
+<div class="col-md-4">
+  <div class="tok-clip  hover-bound">
+    <div class="picfx">
+      <a href="/recipes/<%= recipe[index+2].id %>">
+        <img class="lzy-ld" data-original="<%= recipe[index+2].image %>" src="<%= recipe[index+2].image %>" alt="#" style="display: inline;">
+      </a>
+    </div>
+
+    <a href="/recipes/<%= recipe[index+2].id %>" class="article-title">
+     <h2 class="text-center"><%= recipe[index+2].title %></h2>
+   </a>
+
+   <div class="tok-social hidden-phone" style="display: none;">
+    <a class="reddit-share" href="#"><i class="icon-reddit"></i> 0</a>
+    <a class="fb-share" href="#"><i class="icon-facebook"></i>1</a>
+    <a class="tw-share" href="#"><i class="icon-twitter"></i>9</a>
+  </div>
+
+  <div class="tok-micro" style="display: block;"><span class="glyphicon glyphicon-heart" style="vertical-align:4px;"></span></div>
+
+
+</div>
+
+</div><!-- /col -->
+
+

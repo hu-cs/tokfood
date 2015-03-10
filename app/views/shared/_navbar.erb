@@ -1,36 +1,36 @@
 <div id="navbar-main">
-      <!-- Fixed navbar -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon icon-shield" style="font-size:30px; color:#3498db;"></span>
-          </button>
-          <a class="navbar-brand hidden-xs hidden-sm" href="#home"><span class="icon icon-shield" style="font-size:18px; color:#3498db;"></span></a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="#home" class="smoothScroll">Home</a></li>
-      <li> <a href="#about" class="smoothScroll"> About</a></li>
-      <li> <a href="#services" class="smoothScroll"> Services</a></li>
-      <li> <a href="#team" class="smoothScroll"> Team</a></li>
-      <li> <a href="#portfolio" class="smoothScroll"> Portfolio</a></li>
-      <li> <a href="#blog" class="smoothScroll"> Blog</a></li>
-      <li> <a href="#contact" class="smoothScroll"> Contact</a></li>
-      <% if user_signed_in? %>
-    
-    <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'smoothScroll' %> </li>
-    <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'smoothScroll'  %></li>
-    <li ><a href="#contact" class="smoothScroll"> Hi <strong><%= current_user.email %></strong>.</a></li>
-  <% else %>
-    <li><%= link_to "Sign up", new_user_registration_path, :class => 'smoothScroll'  %> </li>
-    <li><%= link_to "Login", new_user_session_path, :class => 'smoothScroll'  %></li>
+  <!-- Fixed navbar -->
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon icon-shield" style="font-size:30px; color:#3498db;"></span>
+        </button>
+        <a class="navbar-brand hidden-xs hidden-sm" href="/#home"><span class="icon icon-shield" style="font-size:18px; color:#3498db;"></span></a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/#home" class="smoothScroll">Home</a></li>
+          <li> <a href="/#about" class="smoothScroll"> About</a></li>
+          <li> <a href="/#services" class="smoothScroll"> Services</a></li>
+          <li> <a href="/#team" class="smoothScroll"> Team</a></li>
+          <li> <a href="/#portfolio" class="smoothScroll"> Portfolio</a></li>
+          <li> <a href="/#blog" class="smoothScroll"> Blog</a></li>
+          <li> <a href="/#contact" class="smoothScroll"> Contact</a></li>
+          <% if user_signed_in? %>
 
-  <% end %>
+          <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'smoothScroll' %> </li>
+          <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'smoothScroll'  %></li>
+          <li ><a href="#contact" class="smoothScroll"> Hi <strong><%= current_user.email %></strong>.</a></li>
+          <% else %>
+          <li><%= link_to "Sign up", new_user_registration_path, :class => 'smoothScroll'  %> </li>
+          <li><%= link_to "Login", new_user_session_path, :class => 'smoothScroll'  %></li>
 
-        </div><!--/.nav-collapse -->
+          <% end %>
+
       </div>
       <p class="navbar-text pull-right">
-  
+
     </div>
-    </div>
+  </div>  <!-- fixed navbar -->
+</div> <!-- navbar main -->
