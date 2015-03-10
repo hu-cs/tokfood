@@ -412,24 +412,24 @@ a:after {
 /* Section Dividers Backgrounds */
 
 .divider1 {
-	background-image: url('../bg/divider1.jpg')
+	background-image: url('/assets/bg/divider1.jpg')
 }
 
 .divider2 {
-	background-image: url('../bg/divider2.jpg')
+	background-image: url('/assets/bg/divider2.jpg')
 }
 
 .divider3 {
-	background-image: url('../bg/divider3.jpg');
+	background-image: url('/assets/bg/divider3.jpg');
 	margin-top: 0px;
 }
 
 .divider4 {
-	background-image: url('../bg/divider4.jpg')
+	background-image: url('/assets/bg/divider4.jpg')
 }
 
 .divider6 {
-	background-image: url('../bg/divider6.jpg')
+	background-image: url('/assets/bg/divider6.jpg')
 }
 
 
