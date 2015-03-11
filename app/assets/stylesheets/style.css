@@ -1,5 +1,5 @@
 @media (min-width: 980px)
-.thumbnails.span6 .span4 .daily-clip, .thumbnails .span2 .daily-clip, .thumbnails .span3 .daily-clip {
+.thumbnails.span6 .span4 .tok-clip, .thumbnails .span2 .tok-clip, .thumbnails .span3 .tok-clip {
 height: 280px;
 /*width: 10px;*/
 overflow: hidden;
