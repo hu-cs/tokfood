@@ -13,12 +13,11 @@
           <li><a href="/#home" class="smoothScroll">Home</a></li>
           <li> <a href="/#about" class="smoothScroll"> About</a></li>
           <li> <a href="/#services" class="smoothScroll"> Services</a></li>
-          <li> <a href="/#team" class="smoothScroll"> Team</a></li>
-          <li> <a href="/#portfolio" class="smoothScroll"> Portfolio</a></li>
-          <li> <a href="/#blog" class="smoothScroll"> Blog</a></li>
           <li> <a href="/#contact" class="smoothScroll"> Contact</a></li>
+          <li> <a href="/#contact" class="smoothScroll"> Team</a></li>
           <% if user_signed_in? %>
-
+          <li> <a href="/recipes/new" class="smoothScroll"> New Recipe</a></li>
+          <li> <a href="/recipes/vidoe/all" class="smoothScroll"> All Recipes</a></li>
           <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'smoothScroll' %> </li>
           <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'smoothScroll'  %></li>
           <li ><a href="#contact" class="smoothScroll"> Hi <strong><%= current_user.email %></strong>.</a></li>

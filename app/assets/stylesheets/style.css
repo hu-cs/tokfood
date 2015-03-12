@@ -1,5 +1,5 @@
-@media (min-width: 980px)
-.thumbnails.span6 .span4 .tok-clip, .thumbnails .span2 .tok-clip, .thumbnails .span3 .tok-clip {
+/*@media (min-width: 980px)*/
+.thumbnails.span6 .span4 .tok-clip .thumbnails .span2 .tok-clip, .thumbnails .span3 .tok-clip {
 height: 280px;
 /*width: 10px;*/
 overflow: hidden;
@@ -19,7 +19,7 @@ position: relative;
 background: #fff;
 border: 0 none;
 border: 1px solid #c9c9c9;
-width: 380px;
+width: 350px;
 height: 330px;
 }
 
@@ -65,6 +65,25 @@ overflow: visible;
 position: absolute;
 bottom: 14px;
 right: 14px;
+}
+
+.tok-micro-left {
+float: right;
+cursor: pointer;
+background: #000;
+color: #fff;
+width: 30px;
+height: 30px;
+line-height: 2.6em;
+text-align: center;
+font-size: 1em;
+-webkit-border-radius: 30px;
+-moz-border-radius: 30px;
+border-radius: 30px;
+overflow: visible;
+position: absolute;
+bottom: 14px;
+left: 14px;
 }
 
 .article-title{

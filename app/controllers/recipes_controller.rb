@@ -6,7 +6,8 @@ class RecipesController < ApplicationController
   # GET /recipes
   # GET /recipes.json
   def index
-    @recipes = Recipe.paginate(:page => params[:page], :per_page => 20)
+    puts "index function*****"
+    @recipes = Recipe.where(:published => true).paginate(:page => params[:page], :per_page => 20)
     @featured = Recipe.order("RANDOM()").limit(1)[0]
 
     @user = User.new
@@ -68,6 +69,15 @@ class RecipesController < ApplicationController
       format.html { redirect_to recipes_url, notice: 'Recipe was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def all
+    puts "all function **** "
+    @recipes = Recipe.paginate(:page => params[:page], :per_page => 20)
+    # @featured = Recipe.order("RANDOM()").limit(1)[0]
+
+    @user = User.new
+    render 'recipes/index.html.erb'
   end
 
   def search

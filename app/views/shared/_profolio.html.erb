@@ -3,7 +3,7 @@
   <div class="tok-clip  hover-bound">
     <div class="picfx">
       <a href="/recipes/<%= recipe[index].id %>">
-        <img class="lzy-ld" data-original="<%= recipe[index].image %>" src="<%= recipe[index].image %>" alt="#" style="display: inline;">
+        <img class="lzy-ld" data-original="<%= recipe[index].image %>" src="<%= recipe[index].image %>" alt="#" style="display: inline;width: 350px;">
       </a>
     </div>
 
@@ -17,7 +17,17 @@
       <a class="tw-share" href="#"><i class="icon-twitter"></i>9</a>
     </div>
 
-    <div class="tok-micro" style="display: block;"><span class="glyphicon glyphicon-heart" style="vertical-align:4px;"></span></div>
+    <% if user_signed_in? %>
+    <a href="/recipes/<%= recipe[index].id %>/edit" class="article-title">
+      <div class="tok-micro-left" style="display: block;">
+      <span class="glyphicon glyphicon-edit"></span>
+      </div>
+    </a>
+    <% end %>
+
+    <div class="tok-micro" style="display: block;"><span class="glyphicon glyphicon-heart" style="vertical-align:4px;"></span>
+    <span class="glyphicon glyphicon-edit"></span>
+    </div>
 
   </div>
 
@@ -45,13 +55,12 @@
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
 
-
   <!-- PORTFOLIO IMAGE 2 -->
   <div class="col-md-4">
     <div class="tok-clip  hover-bound">
       <div class="picfx">
         <a href="/recipes/<%= recipe[index+1].id %>">
-          <img class="lzy-ld" data-original="<%= recipe[index+1].image %>" src="<%= recipe[index+1].image %>" alt="#" style="display: inline;">
+          <img class="lzy-ld" data-original="<%= recipe[index+1].image %>" src="<%= recipe[index+1].image %>" alt="#" style="display: inline;width: 350px;">
         </a>
       </div>
 
@@ -65,6 +74,14 @@
       <a class="tw-share" href="#"><i class="icon-twitter"></i>9</a>
     </div>
 
+    <% if user_signed_in? %>
+    <a href="/recipes/<%= recipe[index+1].id %>/edit" class="article-title">
+      <div class="tok-micro-left" style="display: block;">
+      <span class="glyphicon glyphicon-edit"></span>
+      </div>
+    </a>
+    <% end %>
+
     <div class="tok-micro" style="display: block;"><span class="glyphicon glyphicon-heart" style="vertical-align:4px;"></span></div>
     
 
@@ -73,13 +90,14 @@
 </div><!-- /col -->
 
 
+<% unless recipe[index+2].nil? %>
 
 <!-- PORTFOLIO IMAGE 3 -->
 <div class="col-md-4">
   <div class="tok-clip  hover-bound">
     <div class="picfx">
       <a href="/recipes/<%= recipe[index+2].id %>">
-        <img class="lzy-ld" data-original="<%= recipe[index+2].image %>" src="<%= recipe[index+2].image %>" alt="#" style="display: inline;">
+        <img class="lzy-ld" data-original="<%= recipe[index+2].image %>" src="<%= recipe[index+2].image %>" alt="#" style="display: inline;width: 350px;">
       </a>
     </div>
 
@@ -93,11 +111,17 @@
     <a class="tw-share" href="#"><i class="icon-twitter"></i>9</a>
   </div>
 
+  <% if user_signed_in? %>
+    <a href="/recipes/<%= recipe[index+2].id %>/edit" class="article-title">
+      <div class="tok-micro-left" style="display: block;">
+      <span class="glyphicon glyphicon-edit"></span>
+      </div>
+    </a>
+    <% end %>
+
   <div class="tok-micro" style="display: block;"><span class="glyphicon glyphicon-heart" style="vertical-align:4px;"></span></div>
-
-
 </div>
-
+<%end%>
 </div><!-- /col -->
 
 
