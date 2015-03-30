@@ -8,7 +8,7 @@ class RecipesController < ApplicationController
   def index
     puts "index function*****"
     @recipes = Recipe.where(:published => true).paginate(:page => params[:page], :per_page => 20)
-    @featured = Recipe.order("RANDOM()").limit(1)[0]
+    # @featured = Recipe.order("RANDOM()").limit(1)[0]
 
     @user = User.new
     #@recipes = Recipe.all
