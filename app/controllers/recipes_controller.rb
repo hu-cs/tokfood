@@ -18,6 +18,9 @@ class RecipesController < ApplicationController
   # GET /recipes/1.json
   def show
     @latest = Recipe.last(4)
+    @user = User.new
+    @recipes = Recipe.where(:published => true).paginate(:page => params[:page], :per_page => 20)
+   
   end
 
   # GET /recipes/new

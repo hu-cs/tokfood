@@ -21,6 +21,7 @@
             </div>
 
             <div class="col-md-4">
+                 <%= render "shared/ads" %>
                 <h3>Recipe Description</h3>
                 <p><%= @recipe.serving.html_safe %></p>
                 <h3>Ingredients</h3>
@@ -29,7 +30,7 @@
 
         </div>
         <!-- /.row -->
-       <br/>
+       
        <%= render "shared/ads" %>
 
         <!-- Related Projects Row -->
@@ -50,6 +51,49 @@
         <!-- /.row -->
 
         <hr>
+
+         <!-- ==== START PORTFOLIO ==== -->
+    <div class="container" id="portfolio" name="portfolio">
+      <br>
+        <div class="row">
+          <br>
+          <h1 class="centered">WE CREATE COOL STUFF</h1>
+          <hr>
+          <br>
+          <br>
+        </div><!-- /row -->
+        <!--inner container -->
+        <div class="container">  
+          <% @recipes.shuffle.each_with_index do | recipe, index | %>
+          <% if index % 3 == 0 %>
+          <%= render "shared/profolio", :recipe => @recipes, :index => index-1 %>
+          <% end %>
+          <% end %>
+          <br>
+          <br>
+          <%= will_paginate @recipes, renderer: BootstrapPagination::Rails %>
+        </div><!--  / inner container -->
+    </div>
+  <!-- ==== END PORTFOLIO ==== -->
+
+         <div class="container" id="contact" name="contact">
+      <div class="row">
+      <br>
+        <h1 class="centered">THANKS FOR VISITING US</h1>
+        <hr>
+        <br>
+        <br>
+        
+        <%= render "shared/contactinfo" %>
+        <%= render "shared/newsletter" %>
+        <%= render "shared/supportus" %>
+        
+       
+
+      </div><!-- row -->
+    
+    </div><!-- container -->
+
 
 
     </div>
