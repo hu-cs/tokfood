@@ -23,7 +23,7 @@
             <div class="col-md-4">
                  <%= render "shared/ads" %>
                 <h3>Recipe Description</h3>
-                <p><%= @recipe.serving.html_safe %></p>
+                <%= @recipe.serving.html_safe %>
                 <h3>Ingredients</h3>
                 <%= @recipe.ingredients.html_safe %>
             </div>
